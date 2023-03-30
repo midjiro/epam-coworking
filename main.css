@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Open+Sans:wght@400;500&display=swap');
+
+:root {
+	/* Colors */
+	--light: #ffffff;
+	--gray: #888888;
+	--black: #161616;
+	--blue: #4361ee;
+	/* Font Sizing */
+	/* 16.00px → 18.00px */
+	--sm: clamp(1rem, calc(0.96rem + 0.19vw), 1.13rem);
+	/* 24.00px → 32.00px  */
+	--md: clamp(1.5rem, calc(1.32rem + 0.75vw), 2rem);
+	/* 32.00px → 36.00px  */
+	--lg: clamp(2rem, calc(1.91rem + 0.38vw), 2.25rem);
+	/* 36.00px → 48.00px  */
+	--xl: clamp(2.25rem, calc(1.99rem + 1.13vw), 3rem);
+}
+
+*,
+*:after {
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: var(--sm);
+	color: var(--black);
+	margin: 0;
+}
