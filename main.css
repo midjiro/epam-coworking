@@ -2,7 +2,7 @@
 
 :root {
 	/* Colors */
-	--light: #ffffff;
+	--white: #ffffff;
 	--gray: #888888;
 	--black: #161616;
 	--blue: #4361ee;
@@ -24,8 +24,164 @@
 }
 
 body {
-	font-family: 'Open Sans', sans-serif;
 	font-size: var(--sm);
 	color: var(--black);
 	margin: 0;
+}
+
+h1,
+h2,
+h3 {
+	font-family: 'Cormorant Garamond', serif;
+}
+
+p,
+a,
+input,
+button {
+	font-family: 'Open Sans', 'Arial', sans-serif;
+	font-size: var(--sm);
+}
+
+a {
+	inline-size: max-content;
+	display: block;
+	text-decoration: none;
+}
+
+a,
+a:after,
+button {
+	transition: all 0.2s ease-in-out;
+}
+
+button {
+	background: transparent;
+}
+
+h1 {
+	font-style: var(--xl);
+}
+
+h2 {
+	font-size: var(--lg);
+}
+
+h3 {
+	font-size: var(--md);
+}
+
+img {
+	max-inline-size: 100%;
+}
+
+.navbar {
+	align-items: center;
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+}
+
+.navbar__menu {
+	display: none;
+}
+
+.navbar {
+	padding: 2% 4%;
+}
+
+.navbar__brand {
+	font-size: var(--md);
+}
+
+.navbar__btn {
+	inline-size: 1.5rem;
+	block-size: 1.125rem;
+	align-items: stretch;
+	border: none;
+}
+
+.navbar__btn--active {
+	justify-content: center;
+}
+
+.navbar__dash {
+	inline-size: 100%;
+	block-size: 2px;
+	background: var(--black);
+}
+
+.navbar__btn--active > .navbar__dash:nth-of-type(1) {
+	opacity: 0;
+}
+
+.navbar__btn--active > .navbar__dash:nth-child(3) {
+	opacity: 0;
+}
+
+.navbar,
+.navbar__btn,
+.navbar__menu--active {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.navbar__btn--active,
+.navbar__menu--active {
+	flex-direction: column;
+}
+
+.navbar__menu--active {
+	inline-size: 100%;
+	gap: 1rem;
+}
+
+.navbar__link {
+	position: relative;
+	color: inherit;
+}
+
+.navbar__link:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	inline-size: 100%;
+	block-size: 2px;
+	background: var(--blue);
+}
+
+.navbar__link:hover:after,
+.navbar__link:focus:after {
+	inline-size: 0;
+}
+
+.button--outline {
+	padding: 0.875rem 1.25rem;
+	border: 2px solid var(--blue);
+	color: var(--blue);
+	font-weight: 500;
+}
+
+.button--outline:hover,
+.button--outline:focus {
+	background: var(--blue);
+	color: var(--white);
+}
+
+@media screen and (min-width: 48em) {
+	.navbar {
+		padding: 1.11% 4.44%;
+	}
+
+	.navbar__btn {
+		display: none;
+	}
+
+	.navbar__menu {
+		position: initial;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 1rem;
+	}
 }
