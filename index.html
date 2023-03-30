@@ -6,5 +6,134 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>MyOffice</title>
 	</head>
-	<body></body>
+	<body>
+		<header class="navbar">
+			<h1 class="navbar__brand">MyOffice</h1>
+			<button class="navbar__btn">
+				<span class="navbar__dash"></span>
+				<span class="navbar__dash"></span>
+				<span class="navbar__dash"></span>
+			</button>
+			<nav class="navbar__menu" role="menu">
+				<a href="#about" class="navbar__link" role="menuitem"> About Us </a>
+				<a href="#pricing" class="navbar__link" role="menuitem">
+					Coworking Types
+				</a>
+				<a href="#contacts" class="navbar__link" role="menuitem"> Contacts </a>
+				<a href="#booking-form" class="button--outline" role="menuitem">
+					Book a place
+				</a>
+			</nav>
+		</header>
+		<main class="container">
+			<section id="about" class="about" aria-label="about">
+				<div class="about__story">
+					<h2 class="title">MyOffice Work Space</h2>
+					<p class="text">
+						We take care of clients, creating the most comfortable working
+						conditions in our office. Choose and try the type of coworking that
+						is most suitable for your activity.
+					</p>
+					<a href="#" class="button--otline">Book a place</a>
+				</div>
+				<img src="images/header.png" alt="" class="about__photo" />
+			</section>
+			<section id="pricing" class="pricing" aria-label="pricing">
+				<h2 class="title">Coworking Types</h2>
+				<div class="pricing__container">
+					<article class="coworking pricing__coworking">
+						<h3 class="title coworking__type">Open Space</h3>
+						<img src="images/open-space.png" alt="" class="coworking__photo" />
+						<div class="coworking__description">
+							<p class="text coworking__places">32 work places</p>
+							<p class="text coworking__price">10 $ / day</p>
+						</div>
+					</article>
+					<article class="coworking pricing__coworking">
+						<h3 class="title coworking__title">Work Space</h3>
+						<img src="images/work-space.png" alt="" class="coworking__photo" />
+						<div class="coworking__description">
+							<p class="text coworking__places">24 work places</p>
+							<p class="text coworking__price">128 $ / month</p>
+						</div>
+					</article>
+					<article class="coworking pricing__coworking">
+						<h3 class="title coworking__title">Meeting Room</h3>
+						<img
+							src="images/meeting-room.png"
+							alt=""
+							class="coworking__photo"
+						/>
+						<div class="coworking__description">
+							<p class="text coworking__places">12 work places</p>
+							<p class="text coworking__price">15 $ / hour</p>
+						</div>
+					</article>
+				</div>
+			</section>
+			<section id="booking-form" class="booking" aria-label="booking form">
+				<h2 class="title">Fill the blank</h2>
+				<p class="text">
+					Fill the blank and enjoy time spent in our office! Application will be
+					processed in few minutes.
+				</p>
+				<form action="" method="POST" class="form booking__form">
+					<fieldset>
+						<input
+							type="text"
+							name="full-name"
+							placeholder="Full Name"
+							class="form__field"
+						/>
+						<input
+							type="tel"
+							name="phone"
+							placeholder="Phone Number"
+							class="form__field"
+						/>
+					</fieldset>
+					<fieldset>
+						<legend class="form__legend">Select Coworking type:</legend>
+						<label>
+							<input
+								type="radio"
+								name="coworking-type"
+								value="open-space"
+								class="booking__radio"
+								checked
+							/>
+							Open Space
+						</label>
+						<label>
+							<input
+								type="radio"
+								name="coworking-type"
+								value="work-space"
+								class="booking__radio"
+							/>
+							Work Space
+						</label>
+						<label>
+							<input
+								type="radio"
+								name="coworking-type"
+								value="meeting-room"
+								class="booking__radio"
+							/>
+							Meeting Room
+						</label>
+					</fieldset>
+					<button type="submit" class="button--otline">Book a place</button>
+				</form>
+			</section>
+		</main>
+		<footer id="contacts" class="contacts" aria-label="contacts">
+			<h2 class="title">Contacts</h2>
+			<ul>
+				<li>
+					<a href="tel:+380684771085" class="contacts__link">Hulak Mykhailo</a>
+				</li>
+			</ul>
+		</footer>
+	</body>
 </html>
