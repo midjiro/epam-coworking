@@ -89,6 +89,10 @@ fieldset {
 	border: none;
 }
 
+ul {
+	list-style-type: none;
+}
+
 .navbar {
 	position: fixed;
 	top: 0;
@@ -103,7 +107,8 @@ fieldset {
 	display: none;
 }
 
-.navbar {
+.navbar,
+.contacts {
 	padding: 2% 4%;
 }
 
@@ -138,7 +143,8 @@ fieldset {
 
 .navbar,
 .navbar__btn,
-.navbar__menu--active {
+.navbar__menu--active,
+.contacts__list {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -149,7 +155,8 @@ fieldset {
 	flex-direction: column;
 }
 
-.navbar__menu--active {
+.navbar__menu--active,
+.contacts__list {
 	inline-size: 100%;
 	gap: 1rem;
 }
@@ -226,7 +233,8 @@ fieldset {
 	gap: 2rem;
 }
 
-.pricing__title {
+.pricing__title,
+.contacts__title {
 	text-align: center;
 }
 
@@ -286,12 +294,25 @@ fieldset {
 	outline-color: var(--blue);
 }
 
+.contacts__list {
+	justify-content: center;
+}
+
+.contacts__item {
+	inline-size: max-content;
+}
+
+.contacts__link {
+	color: var(--blue);
+}
+
 @media screen and (min-width: 48em) {
 	section {
 		padding-block: 2.87%;
 	}
 
-	.navbar {
+	.navbar,
+	.contacts {
 		padding: 1.11% 4.44%;
 	}
 
