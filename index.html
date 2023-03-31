@@ -55,7 +55,7 @@
 						<img src="images/work-space.png" alt="" class="coworking__photo" />
 						<div class="coworking__description">
 							<p class="text coworking__places">24 work places</p>
-							<p class="text coworking__price">128 $ / month</p>
+							<p class="text coworking__price">5 $ / day</p>
 						</div>
 					</article>
 					<article class="coworking pricing__coworking">
@@ -67,14 +67,14 @@
 						/>
 						<div class="coworking__description">
 							<p class="text coworking__places">12 work places</p>
-							<p class="text coworking__price">15 $ / hour</p>
+							<p class="text coworking__price">8 $ / day</p>
 						</div>
 					</article>
 				</div>
 			</section>
 			<section id="booking-form" class="booking" aria-label="booking form">
-				<h2 class="title">Fill the blank</h2>
-				<p class="text">
+				<h2 class="title booking__title">Fill the blank</h2>
+				<p class="text booking__text">
 					Fill the blank and enjoy time spent in our office! Application will be
 					processed in few minutes.
 				</p>
@@ -85,42 +85,33 @@
 							name="full-name"
 							placeholder="Full Name"
 							class="form__field"
+							required
 						/>
 						<input
 							type="tel"
 							name="phone"
 							placeholder="Phone Number"
 							class="form__field"
+							required
 						/>
 					</fieldset>
 					<fieldset>
-						<legend class="form__legend">Select Coworking type:</legend>
-						<label>
+						<legend class="form__legend">Coworking type:</legend>
+						<label class="form__radio">
 							<input
 								type="radio"
 								name="coworking-type"
 								value="open-space"
-								class="booking__radio"
 								checked
 							/>
 							Open Space
 						</label>
-						<label>
-							<input
-								type="radio"
-								name="coworking-type"
-								value="work-space"
-								class="booking__radio"
-							/>
+						<label class="form__radio">
+							<input type="radio" name="coworking-type" value="work-space" />
 							Work Space
 						</label>
-						<label>
-							<input
-								type="radio"
-								name="coworking-type"
-								value="meeting-room"
-								class="booking__radio"
-							/>
+						<label class="form__radio">
+							<input type="radio" name="coworking-type" value="meeting-room" />
 							Meeting Room
 						</label>
 					</fieldset>
@@ -128,7 +119,7 @@
 				</form>
 			</section>
 		</main>
-		<footer id="contacts" class="contacts" aria-label="contacts">
+		<footer>
 			<h2 class="title">Contacts</h2>
 			<ul>
 				<li>

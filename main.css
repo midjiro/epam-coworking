@@ -42,6 +42,7 @@ h3 {
 p,
 a,
 input,
+label,
 button {
 	font-family: 'Open Sans', 'Arial', sans-serif;
 	font-size: var(--sm);
@@ -55,7 +56,8 @@ a {
 
 a,
 a:after,
-button {
+button,
+.form__field {
 	transition: all 0.2s ease-in-out;
 }
 
@@ -81,6 +83,10 @@ img {
 
 section:not(.about) {
 	padding-block: 8.13%;
+}
+
+fieldset {
+	border: none;
 }
 
 .navbar {
@@ -243,6 +249,41 @@ section:not(.about) {
 	margin-block-end: 0;
 	color: var(--blue);
 	font-weight: 500;
+}
+
+.form__legend {
+	font-size: var(--sm);
+	font-weight: 500;
+}
+
+.booking__title,
+.booking__text {
+	max-inline-size: 45ch;
+	text-align: center;
+	margin-inline: auto;
+}
+
+.booking__form {
+	display: grid;
+	place-items: center;
+	gap: 1.125rem;
+}
+
+.form__field,
+.form__radio {
+	display: block;
+	margin-block: 0.875rem;
+}
+
+.form__field {
+	min-inline-size: 290px;
+	padding: 1.125rem;
+	border: 1px solid var(--gray);
+}
+
+.form__field:focus {
+	border-color: var(--blue);
+	outline-color: var(--blue);
 }
 
 @media screen and (min-width: 48em) {
