@@ -4,9 +4,9 @@ A responsive web page consists of a header (brand, menu button, navigation), mai
 
 ## About
 
-!(images/WebSiteDesktop)
+![](images/WebSiteDesktop)
 
-!(images/WebSiteMobile)
+![](images/WebSiteMobile)
 
 
 ## Built with
@@ -17,10 +17,10 @@ A responsive web page consists of a header (brand, menu button, navigation), mai
 ## Contacts
 
 - Mykhailo Hulak +380684771085
-- Drymto Boyko +380963033846
+- Dmytro Boyko +380963033846
 - Oleh Hel +380986024421
-- Broslavskyi Yurii +380733255011
+- Yurii Broslavskyi +380733255011
 - Anna-Maria Kischuk +380966606989
-- Galaburda Liza +380930021633
-- Nemyrka Denys +380634372999
+- Liza Galaburda +380930021633
+- Denys Nemyrka +380634372999
 - Oleh Tysovskyi +380989684475
