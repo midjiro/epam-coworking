@@ -1,8 +1,7 @@
 # Epam Coworking
 
-![](images/WebSiteDesktop)
-
-![](images/WebSiteMobile)
+![](images/WebSiteDesktop.jpg)
+![](images/WebSiteMobile.jpg)
 
 ## About
 
