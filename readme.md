@@ -4,15 +4,15 @@ A responsive web page consists of a header (brand, menu button, navigation), mai
 
 ## About
 
-!(/images/WebSiteDesktop)
+!(images/WebSiteDesktop)
 
-!(/images/WebSiteMobile)
+!(images/WebSiteMobile)
 
 
 ## Built with
--Semantic HTML5
--CSS3
--JavaScript
+- Semantic HTML5
+- CSS3
+- JavaScript
 
 ## Contacts
 
