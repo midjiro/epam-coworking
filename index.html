@@ -10,12 +10,10 @@
 	<body>
 		<header class="navbar">
 			<h1 class="navbar__brand">MyOffice</h1>
-			<button class="navbar__btn">
-				<span class="navbar__dash"></span>
-				<span class="navbar__dash"></span>
-				<span class="navbar__dash"></span>
+			<button class="navbar__toggle" aria-expanded="false" aria-controls="navbar-menu">
+				<i class="fa-light fa-bars"></i>
 			</button>
-			<nav class="navbar__menu" role="menu">
+			<nav class="navbar__menu" id="navbar-menu" role="menu">
 				<a href="#about" class="navbar__link" role="menuitem"> About Us </a>
 				<a href="#pricing" class="navbar__link" role="menuitem">
 					Coworking Types
