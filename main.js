@@ -16,7 +16,7 @@ function isExpanded(button) {
 	return isExpanded;
 }
 
-function toggleMenuVisibility(button, menu) {
+function switchMenuState(button, menu) {
 	if (!menu) {
 		throw new Error('No menu element provided.');
 		return;
@@ -32,7 +32,7 @@ function toggleMenuVisibility(button, menu) {
 
 button.addEventListener('click', (e) => {
 	let menu = getMenu(e.currentTarget);
-	toggleMenuVisibility(button, menu);
+	switchMenuState(button, menu);
 });
 
 window.addEventListener('resize', () => {
