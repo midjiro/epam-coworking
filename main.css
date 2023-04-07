@@ -90,14 +90,12 @@ fieldset {
 }
 
 ul {
-	list-style-type: none;
+	list-style: none;
 }
 
 .navbar {
 	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
+	inset: 0 0 auto;
 	align-items: center;
 	background: var(--white);
 	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
@@ -124,10 +122,6 @@ ul {
 	transform: rotate(90deg);
 }
 
-.navbar__icon {
-	color: var(--black);
-}
-
 .navbar,
 .navbar__toggle[aria-expanded='true'] ~ .navbar__menu,
 .contacts__list {
@@ -146,9 +140,13 @@ ul {
 	gap: 1rem;
 }
 
+.navbar__link,
+.navbar__icon {
+	color: inherit;
+}
+
 .navbar__link {
 	position: relative;
-	color: inherit;
 }
 
 .navbar__link:after {
