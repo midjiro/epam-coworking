@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Open+Sans:wght@400;500&display=swap');
+
+/* General */
+
+@import '_general.css';
+
+/* Resets */
+
+@import '_resets.css';
+
+/* Layout */
+
+@import 'navbar/_navbar.css';
+@import 'about/_about.css';
+@import 'pricing/_pricing.css';
+@import 'booking/_booking.css';
+@import 'contacts/_contacts.css';
+
+/* Media */
+
+@import 'media.css';

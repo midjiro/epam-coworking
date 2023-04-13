@@ -1,187 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-			integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		/>
-		<link rel="stylesheet" href="main.css" />
-		<title>MyOffice</title>
-	</head>
-	<body>
-		<header class="navbar">
-			<h1 class="navbar__brand">MyOffice</h1>
-			<button
-				class="navbar__toggle"
-				aria-expanded="false"
-				aria-controls="navbar-menu"
-			>
-				<i class="fa-solid fa-bars navbar__icon fa-xl"></i>
-			</button>
-			<nav class="navbar__menu" id="navbar-menu" role="menu">
-				<a href="#about" class="navbar__link" role="menuitem"> About Us </a>
-				<a href="#pricing" class="navbar__link" role="menuitem">
-					Coworking Types
-				</a>
-				<a href="#contacts" class="navbar__link" role="menuitem"> Contacts </a>
-				<a href="#booking-form" class="button--outline" role="menuitem">
-					Book a place
-				</a>
-			</nav>
-		</header>
-		<main class="container">
-			<section id="about" class="about" aria-label="about">
-				<div class="about__story">
-					<h2 class="title about__title">MyOffice Work Space</h2>
-					<p class="text">
-						We take care of clients, creating the most comfortable working
-						conditions in our office. Choose and try the type of coworking that
-						is most suitable for your activity.
-					</p>
-					<a href="#booking-form" class="button--outline">Book a place</a>
-				</div>
-				<img src="images/header.png" alt="" class="about__photo" />
-			</section>
-			<section id="pricing" class="pricing" aria-label="pricing">
-				<h2 class="title pricing__title">Coworking Types</h2>
-				<div class="pricing__container">
-					<article class="coworking pricing__coworking">
-						<h3 class="title coworking__type">Open Space</h3>
-						<img
-							src="images/open-space.png"
-							alt="Modern style with a pleasant design.
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="styles/main.css" />
+	<title>MyOffice</title>
+</head>
+
+<body>
+	<header class="navbar">
+		<h1 class="navbar__brand">MyOffice</h1>
+		<button class="navbar__toggle" aria-expanded="false" aria-controls="navbar-menu">
+			<i class="fa-solid fa-bars navbar__icon fa-xl"></i>
+		</button>
+		<nav class="navbar__menu" id="navbar-menu" role="menu">
+			<a href="#about" class="navbar__link" role="menuitem"> About Us </a>
+			<a href="#pricing" class="navbar__link" role="menuitem">
+				Coworking Types
+			</a>
+			<a href="#contacts" class="navbar__link" role="menuitem"> Contacts </a>
+			<a href="#booking-form" class="button--outline" role="menuitem">
+				Book a place
+			</a>
+		</nav>
+	</header>
+	<main class="container">
+		<section id="about" class="about" aria-label="about">
+			<div class="about__story">
+				<h2 class="title about__title">MyOffice Work Space</h2>
+				<p class="text">
+					We take care of clients, creating the most comfortable working
+					conditions in our office. Choose and try the type of coworking that
+					is most suitable for your activity.
+				</p>
+				<a href="#booking-form" class="button--outline">Book a place</a>
+			</div>
+			<img src="images/header.png" alt="" class="about__photo" />
+		</section>
+		<section id="pricing" class="pricing" aria-label="pricing">
+			<h2 class="title pricing__title">Coworking Types</h2>
+			<div class="pricing__container">
+				<article class="coworking pricing__coworking">
+					<h3 class="title coworking__type">Open Space</h3>
+					<img src="images/open-space.png" alt="Modern style with a pleasant design.
 Panoramic windows.
 sofas
 Flora that perfectly complements the interior of the office.
-The spacious office is perfect for collective work and quick communication."
-							class="coworking__photo"
-						/>
-						<div class="coworking__description">
-							<p class="text coworking__places">32 work places</p>
-							<p class="text coworking__price">10 $ / day</p>
-						</div>
-					</article>
-					<article class="coworking pricing__coworking">
-						<h3 class="title coworking__type">Work Space</h3>
-						<img
-							src="images/work-space.png"
-							alt="Modern design
+The spacious office is perfect for collective work and quick communication." class="coworking__photo" />
+					<div class="coworking__description">
+						<p class="text coworking__places">32 work places</p>
+						<p class="text coworking__price">10 $ / day</p>
+					</div>
+				</article>
+				<article class="coworking pricing__coworking">
+					<h3 class="title coworking__type">Work Space</h3>
+					<img src="images/work-space.png" alt="Modern design
 Panoramic windows
-Convenient places to work"
-							class="coworking__photo"
-						/>
-						<div class="coworking__description">
-							<p class="text coworking__places">24 work places</p>
-							<p class="text coworking__price">5 $ / day</p>
-						</div>
-					</article>
-					<article class="coworking pricing__coworking">
-						<h3 class="title coworking__type">Meeting Room</h3>
-						<img
-							src="images/meeting-room.png"
-							alt="Modern style
+Convenient places to work" class="coworking__photo" />
+					<div class="coworking__description">
+						<p class="text coworking__places">24 work places</p>
+						<p class="text coworking__price">5 $ / day</p>
+					</div>
+				</article>
+				<article class="coworking pricing__coworking">
+					<h3 class="title coworking__type">Meeting Room</h3>
+					<img src="images/meeting-room.png" alt="Modern style
 Pleasant lighting
-Convenient places for meetings"
-							class="coworking__photo"
-						/>
-						<div class="coworking__description">
-							<p class="text coworking__places">12 work places</p>
-							<p class="text coworking__price">8 $ / day</p>
-						</div>
-					</article>
-				</div>
-			</section>
-			<section id="booking-form" class="booking" aria-label="booking form">
-				<h2 class="title booking__title">Fill the blank</h2>
-				<p class="text booking__text">
-					Fill the blank and enjoy time spent in our office! Application will be
-					processed in few minutes.
-				</p>
-				<form action="" method="POST" class="form booking__form">
-					<fieldset>
-						<input
-							type="text"
-							name="full-name"
-							placeholder="Full Name"
-							class="form__field"
-							required
-						/>
-						<input
-							type="tel"
-							name="phone"
-							placeholder="Phone Number"
-							class="form__field"
-							required
-						/>
-					</fieldset>
-					<fieldset>
-						<legend class="form__legend">Coworking type:</legend>
-						<label class="form__radio">
-							<input
-								type="radio"
-								name="coworking-type"
-								value="open-space"
-								checked
-							/>
-							Open Space
-						</label>
-						<label class="form__radio">
-							<input type="radio" name="coworking-type" value="work-space" />
-							Work Space
-						</label>
-						<label class="form__radio">
-							<input type="radio" name="coworking-type" value="meeting-room" />
-							Meeting Room
-						</label>
-					</fieldset>
-					<button type="submit" class="button--outline">Book a place</button>
-				</form>
-			</section>
-		</main>
-		<footer id="contacts" class="contacts" aria-label="contacts">
-			<h2 class="title contacts__title">Contacts</h2>
-			<ul class="contacts__list">
-				<li class="contacts__item">
-					<a href="tel:+380634372999" class="contacts__link">Nemurka Denus</a>
-				</li>
-				<li class="contacts__item">
-					<a href="tel:+380684771085" class="contacts__link">Hulak Mykhailo</a>
-				</li>
-				<li class="contacts__item">
-					<a href="tel:+380966606989" class="contacts__link">
-						Kishchuk Ganna-Maria
-					</a>
-				</li>
-				<li class="contacts__item">
-					<a href="tel:+380930021633" class="contacts__link">
-						Galaburda Liza
-					</a>
-				</li>
-				<li class="contacts__item">
-					<a href="tel:+380963033846" class="contacts__link">Dmytro Boyko </a>
-				</li>
-				<li class="contacts__item">
-					<a href="tel:+380986024421" class="contacts__link">Oleh Hel </a>
-				</li>
-				<li class="contacts__item">
-					<a href="tel:+380733255011" class="contacts__link">
-						Yurii Broslavskyi
-					</a>
-				</li>
-				<li class="contacts__item">
-					<a href="tel:+380634372999" class="contacts__link"> Denys Nemyrka </a>
-				</li>
-				<li class="contacts__item">
-					<a href="+380989684475" class="contacts__link"> Oleh Tysovskyi </a>
-				</li>
-			</ul>
-			<script src="main.js"></script>
-		</footer>
-	</body>
+Convenient places for meetings" class="coworking__photo" />
+					<div class="coworking__description">
+						<p class="text coworking__places">12 work places</p>
+						<p class="text coworking__price">8 $ / day</p>
+					</div>
+				</article>
+			</div>
+		</section>
+		<section id="booking-form" class="booking" aria-label="booking form">
+			<h2 class="title booking__title">Fill the blank</h2>
+			<p class="text booking__text">
+				Fill the blank and enjoy time spent in our office! Application will be
+				processed in few minutes.
+			</p>
+			<form action="" method="POST" class="form booking__form">
+				<fieldset>
+					<input type="text" name="full-name" placeholder="Full Name" class="form__field" required />
+					<input type="tel" name="phone" placeholder="Phone Number" class="form__field" required />
+				</fieldset>
+				<fieldset>
+					<legend class="form__legend">Coworking type:</legend>
+					<label class="form__radio">
+						<input type="radio" name="coworking-type" value="open-space" checked />
+						Open Space
+					</label>
+					<label class="form__radio">
+						<input type="radio" name="coworking-type" value="work-space" />
+						Work Space
+					</label>
+					<label class="form__radio">
+						<input type="radio" name="coworking-type" value="meeting-room" />
+						Meeting Room
+					</label>
+				</fieldset>
+				<button type="submit" class="button--outline">Book a place</button>
+			</form>
+		</section>
+	</main>
+	<footer id="contacts" class="contacts" aria-label="contacts">
+		<h2 class="title contacts__title">Contacts</h2>
+		<ul class="contacts__list">
+			<li class="contacts__item">
+				<a href="tel:+380634372999" class="contacts__link">Nemurka Denus</a>
+			</li>
+			<li class="contacts__item">
+				<a href="tel:+380684771085" class="contacts__link">Hulak Mykhailo</a>
+			</li>
+			<li class="contacts__item">
+				<a href="tel:+380966606989" class="contacts__link">
+					Kishchuk Ganna-Maria
+				</a>
+			</li>
+			<li class="contacts__item">
+				<a href="tel:+380930021633" class="contacts__link">
+					Galaburda Liza
+				</a>
+			</li>
+			<li class="contacts__item">
+				<a href="tel:+380963033846" class="contacts__link">Dmytro Boyko </a>
+			</li>
+			<li class="contacts__item">
+				<a href="tel:+380986024421" class="contacts__link">Oleh Hel </a>
+			</li>
+			<li class="contacts__item">
+				<a href="tel:+380733255011" class="contacts__link">
+					Yurii Broslavskyi
+				</a>
+			</li>
+			<li class="contacts__item">
+				<a href="tel:+380634372999" class="contacts__link"> Denys Nemyrka </a>
+			</li>
+			<li class="contacts__item">
+				<a href="+380989684475" class="contacts__link"> Oleh Tysovskyi </a>
+			</li>
+		</ul>
+		<script src="main.js"></script>
+	</footer>
+</body>
+
 </html>
