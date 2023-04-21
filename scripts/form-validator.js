@@ -21,11 +21,13 @@ class FormValidator {
       let entries = localStorage.getItem("places");
       if (entries === null) {
         addLocalStorageEntry("places", [entry]);
-        return;
+      } else {
+        entries = JSON.parse(entries);
+        entries.push(entry);
+        addLocalStorageEntry("places", entries);
       }
-      entries = JSON.parse(entries);
-      entries.push(entry);
-      addLocalStorageEntry("places", entries);
+
+      alert("Place booked successfully!");
     }
   }
 
