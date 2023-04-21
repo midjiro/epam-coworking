@@ -86,25 +86,28 @@ Convenient places for meetings" class="coworking__photo" />
 				processed in few minutes.
 			</p>
 			<form action="" method="POST" class="form booking__form">
-				<fieldset>
-					<input type="text" name="full-name" placeholder="Full Name" class="form__field" required />
-					<input type="tel" name="phone" placeholder="Phone Number" class="form__field" required />
-				</fieldset>
-				<fieldset>
-					<legend class="form__legend">Coworking type:</legend>
-					<label class="form__radio">
-						<input type="radio" name="coworking-type" value="open-space" checked />
-						Open Space
-					</label>
-					<label class="form__radio">
-						<input type="radio" name="coworking-type" value="work-space" />
-						Work Space
-					</label>
-					<label class="form__radio">
-						<input type="radio" name="coworking-type" value="meeting-room" />
-						Meeting Room
-					</label>
-				</fieldset>
+				<div>
+					<input type="number" name=placeNumber" placeholder="Place Number" class="form__field" required />
+					<p class="form__error"></p>
+				</div>
+				<div>
+					<input type="date" name="date" placeholder="Date" class="form__field" required />
+					<p class="form__error"></p>
+				</div>
+				<div>
+
+					<input list="coworking-type" type="text" name="coworkingType" placeholder="Coworking Type
+					" class="form__field" required />
+					<p class="form__error"></p>
+				</div>
+
+
+
+				<datalist id="coworking-type">
+					<option value="open-space">Open Space</option>
+					<option value="work-space">Work Space</option>
+					<option value="meeting-room">Meeting Room</option>
+				</datalist>
 				<button type="submit" class="button--outline">Book a place</button>
 			</form>
 		</section>
@@ -146,7 +149,7 @@ Convenient places for meetings" class="coworking__photo" />
 				<a href="+380989684475" class="contacts__link"> Oleh Tysovskyi </a>
 			</li>
 		</ul>
-		<script src="main.js"></script>
+		<script src="scripts/main.js" type="module"></script>
 	</footer>
 </body>
 

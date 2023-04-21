@@ -16,18 +16,26 @@
 }
 
 .form__field,
-.form__radio {
-  display: block;
-  margin-block: 0.875rem;
+.form__error {
+  inline-size: 290px;
 }
 
 .form__field {
-  min-inline-size: 290px;
+  display: block;
+  margin-block: 0.25rem;
   padding: 1.125rem;
   border: 1px solid var(--gray);
 }
 
+.form__error {
+  color: red;
+}
+
 /* STATES */
+
+.form__field--invalid {
+  border-color: red;
+}
 
 .form__field:focus {
   border-color: var(--blue);
