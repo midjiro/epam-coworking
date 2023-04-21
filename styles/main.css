@@ -14,8 +14,10 @@
 @import "about/about.css";
 @import "pricing/pricing.css";
 @import "booking/booking.css";
+@import "map/map.css";
 @import "contacts/contacts.css";
 
 /* Media */
 
 @import "media.css";
+

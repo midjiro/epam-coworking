@@ -1,0 +1,10 @@
+#map {
+    height: 400px;
+    width: 50%;
+}
+
+iframe {
+    display: block;
+    margin: block;
+    height: 400px;
+}
