@@ -1,7 +1,7 @@
 h1,
 h2,
 h3 {
-	font-family: 'Cormorant Garamond', 'Garamond', serif;
+  font-family: "Cormorant Garamond", "Garamond", serif;
 }
 
 p,
@@ -9,51 +9,59 @@ a,
 input,
 label,
 button {
-	font-family: 'Open Sans', 'Arial', sans-serif;
-	font-size: var(--sm);
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: var(--sm);
 }
 
 a {
-	inline-size: max-content;
-	display: block;
-	text-decoration: none;
+  inline-size: max-content;
+  display: block;
+  text-decoration: none;
 }
 
 a,
 a:after,
 button,
 .form__field {
-	transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 button {
-	background: transparent;
+  background: transparent;
 }
 
 h1 {
-	font-style: var(--xl);
+  font-style: var(--xl);
 }
 
 h2 {
-	font-size: var(--lg);
+  font-size: var(--lg);
+  text-align: center;
+  margin-inline: auto;
 }
 
 h3 {
-	font-size: var(--md);
+  font-size: var(--md);
+}
+
+p {
+  max-inline-size: 100%;
+  color: var(--gray);
+  line-height: 1.5;
 }
 
 img {
-	max-inline-size: 100%;
+  max-inline-size: 100%;
 }
 
 section:not(.about) {
-	padding-block: 8.13%;
+  padding-block: 8.13%;
 }
 
 fieldset {
-	border: none;
+  border: none;
 }
 
 ul {
-	list-style: none;
+  list-style: none;
 }

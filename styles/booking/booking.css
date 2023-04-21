@@ -1,37 +1,35 @@
-
 .form__legend {
-	font-size: var(--sm);
-	font-weight: 500;
+  font-size: var(--sm);
+  font-weight: 500;
 }
 
-.booking__title,
 .booking__text {
-	max-inline-size: 45ch;
-	text-align: center;
-	margin-inline: auto;
+  max-inline-size: 45ch;
+  text-align: center;
+  margin-inline: auto;
 }
 
 .booking__form {
-	display: grid;
-	place-items: center;
-	gap: 1.125rem;
+  display: grid;
+  place-items: center;
+  gap: 1.125rem;
 }
 
 .form__field,
 .form__radio {
-	display: block;
-	margin-block: 0.875rem;
+  display: block;
+  margin-block: 0.875rem;
 }
 
 .form__field {
-	min-inline-size: 290px;
-	padding: 1.125rem;
-	border: 1px solid var(--gray);
+  min-inline-size: 290px;
+  padding: 1.125rem;
+  border: 1px solid var(--gray);
 }
 
 /* STATES */
 
 .form__field:focus {
-	border-color: var(--blue);
-	outline-color: var(--blue);
+  border-color: var(--blue);
+  outline-color: var(--blue);
 }
