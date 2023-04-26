@@ -145,8 +145,8 @@ form {
   border-color: #4361ee;
 }
 
-.form__message {
-  color: red;
+.field__message {
+  color: #ef233c;
 }
 
 .navbar {
@@ -257,7 +257,7 @@ form {
 }
 
 .field__input--invalid {
-  border-color: red;
+  border-color: #ef233c;
 }
 
 @media only screen and (min-width: 48em) {

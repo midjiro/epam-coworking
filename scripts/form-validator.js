@@ -37,7 +37,7 @@ class FormValidator {
 
     if (invalidFieldId == -1) {
       this.invalidFields.push(field);
-      field.classList.add("form__field--invalid");
+      field.classList.add("field__input--invalid");
     }
 
     errorElement.textContent = message;
@@ -49,7 +49,7 @@ class FormValidator {
     let invalidFieldId = this.invalidFields.indexOf(field);
     if (invalidFieldId > -1) {
       this.invalidFields.splice(invalidFieldId, 1);
-      field.classList.remove("form__field--invalid");
+      field.classList.remove("field__input--invalid");
     }
 
     errorElement.textContent = "";
