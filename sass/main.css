@@ -106,8 +106,7 @@ form {
 }
 
 .card {
-  inline-size: -moz-max-content;
-  inline-size: max-content;
+  inline-size: clamp(290px, 27.7%, 325px);
   padding: 1.5rem;
   border: 2px solid #4361ee;
 }

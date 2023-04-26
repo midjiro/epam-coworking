@@ -1,5 +1,5 @@
 .card {
-  inline-size: max-content;
+  inline-size: clamp(290px, 27.7%, 325px);
   padding: 1.5rem;
   border: 2px solid $blue;
 }
