@@ -1,11 +1,12 @@
 import { getFormData, addLocalStorageEntry } from "./utils.js";
 
 class FormValidator {
-  constructor(form) {
-    this.form = form;
+  constructor(formSelector) {
+    console.log(document.querySelector(formSelector));
+    this.form = document.querySelector(formSelector);
     this.invalidFields = [];
 
-    form.addEventListener("submit", this.handleSubmit);
+    this.form.addEventListener("submit", this.handleSubmit);
   }
 
   get hasInvalidFields() {

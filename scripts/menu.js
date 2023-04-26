@@ -1,29 +1,38 @@
-function getMenu(button) {
-  let identifier = button.getAttribute("aria-controls");
-  if (!identifier) {
-    throw new Error("No target specified for menu button.");
+class Menu {
+  constructor(toggleSelector) {
+    this.toggle = document.getElementsByClassName(toggleSelector)[0];
+
+    this.#handleLoad();
+    this.toggle.addEventListener("click", this.#switchState.bind(this));
+    window.addEventListener("resize", this.#handleResize.bind(this));
   }
 
-  let menu = document.getElementById(identifier);
-  return menu;
-}
+  get isExpanded() {
+    let expanded = this.toggle.getAttribute("aria-expanded");
+    if (expanded === "true") {
+      return true;
+    }
 
-function isExpanded(button) {
-  let isExpanded = button.getAttribute("aria-expanded");
-  return isExpanded;
-}
-
-function switchMenuState(button, menu) {
-  if (!menu) {
-    throw new Error("No menu element provided.");
+    return false;
   }
 
-  let expanded = isExpanded(button);
-  if (expanded === "false") {
-    button.setAttribute("aria-expanded", "true");
-  } else {
-    button.setAttribute("aria-expanded", "false");
+  #switchState() {
+    this.toggle.setAttribute("aria-expanded", !this.isExpanded);
+  }
+
+  #handleResize() {
+    let width = window.innerWidth;
+    if (!this.isExpanded && width >= 768) {
+      this.toggle.setAttribute("aria-expanded", "true");
+    }
+  }
+
+  #handleLoad() {
+    let width = window.innerWidth;
+    if (width >= 768) {
+      this.toggle.setAttribute("aria-expanded", "true");
+    }
   }
 }
 
-export { getMenu, isExpanded, switchMenuState };
+export default Menu;
