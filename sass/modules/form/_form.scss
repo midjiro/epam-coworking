@@ -1,0 +1,20 @@
+.field {
+  inline-size: 290px;
+}
+
+.field__input {
+  display: block;
+  inline-size: 100%;
+  padding: 1rem;
+  margin-block: 0.25rem;
+  border: 2px solid $gray;
+  outline: none;
+
+  &:focus {
+    border-color: $blue;
+  }
+}
+
+.form__message {
+  color: red;
+}

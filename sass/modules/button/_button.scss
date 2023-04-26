@@ -1,0 +1,12 @@
+.button--outline {
+  padding: 0.875rem 1.25rem;
+  border: 2px solid $blue;
+  color: $blue;
+  font-weight: 500;
+
+  &:hover,
+  &:focus {
+    background: $blue;
+    color: $white;
+  }
+}

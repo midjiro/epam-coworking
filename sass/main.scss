@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Open+Sans:wght@400;500&display=swap");
+
+// Variables
+@import "vars";
+
+// Resets and common styles
+@import "base";
+
+// Reusable components
+@import "modules";
+
+// Major page sections
+@import "layout";
+
+// States set by JavaScript
+@import "states";
+
+// Media queries
+@import "media";

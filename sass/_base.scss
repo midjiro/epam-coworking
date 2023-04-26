@@ -1,0 +1,87 @@
+*,
+*:after,
+*:before {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: $sm;
+  color: $black;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Cormorant Garamond", "Garamond", serif;
+}
+
+a,
+a:after {
+  transition: all 0.2s ease-in-out;
+}
+
+input,
+button {
+  font-size: $sm;
+  transition: all 0.2s ease-in-out;
+}
+
+h2 {
+  font-size: $lg;
+  text-align: center;
+  margin-inline: auto;
+}
+
+h1,
+h3 {
+  font-size: $md;
+}
+
+p {
+  color: $gray;
+  line-height: 1.5;
+}
+
+a {
+  inline-size: max-content;
+  display: block;
+  text-decoration: none;
+  color: $blue;
+}
+
+button {
+  background: transparent;
+}
+
+fieldset {
+  border: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-inline-size: 100%;
+}
+
+section:not(section:first-of-type) {
+  padding-block: 8.13%;
+}
+
+main {
+  padding: 8.53% 10.6%;
+}
+
+form {
+  display: grid;
+  place-items: center;
+  gap: 0.5rem;
+}
