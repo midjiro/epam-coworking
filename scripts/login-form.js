@@ -12,8 +12,6 @@ class LoginForm extends AuthForm {
   async #handleClick() {
     try {
       await signInWithEmailAndPassword(AUTH, this.email, this.password);
-      let alert = new Alert("Logged in successfully");
-      alert.show("success");
     } catch (e) {
       this.handleError(e);
     }

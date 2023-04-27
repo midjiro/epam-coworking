@@ -12,8 +12,6 @@ class RegisterForm extends AuthForm {
   async #handleClick() {
     try {
       await createUserWithEmailAndPassword(AUTH, this.email, this.password);
-      let alert = new Alert("Registered in successfully");
-      alert.show("success");
     } catch (e) {
       this.handleError(e);
     }
