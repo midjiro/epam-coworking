@@ -1,3 +1,19 @@
 .field__input--invalid {
   border-color: $red;
 }
+
+.alert--success {
+  border: 2px solid lightgreen;
+
+  > .alert__message {
+    color: lightgreen;
+  }
+}
+
+.alert--error {
+  border: 2px solid $red;
+
+  > .alert__message {
+    color: $red;
+  }
+}

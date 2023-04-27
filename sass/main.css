@@ -149,6 +149,35 @@ form {
   color: #ef233c;
 }
 
+@keyframes slidedown {
+  from {
+    transform: translateY(-200%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.alert {
+  position: absolute;
+  top: 2%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  max-inline-size: 300px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  border: 2px solid #4361ee;
+  font-weight: 900;
+  background: #ffffff;
+  transition: all 0.2s;
+}
+.alert, .alert--success, .alert--error {
+  animation: 1s forwards slidedown;
+}
+.alert__message {
+  color: #4361ee;
+}
+
 .navbar {
   position: sticky;
   inset: 0 0 auto;
@@ -262,6 +291,20 @@ form {
 
 .field__input--invalid {
   border-color: #ef233c;
+}
+
+.alert--success {
+  border: 2px solid lightgreen;
+}
+.alert--success > .alert__message {
+  color: lightgreen;
+}
+
+.alert--error {
+  border: 2px solid #ef233c;
+}
+.alert--error > .alert__message {
+  color: #ef233c;
 }
 
 @media only screen and (min-width: 48em) {
