@@ -29,4 +29,33 @@ function validateDate(date) {
   };
 }
 
-export { validateDate, validatePlace };
+function validateEmail(value) {
+  const pattern = /([a-z0-9\.-]+)@([a-z0-9]+)\.([a-z]{2,4})/gm;
+  if (value.length === 0 || !pattern.test(value)) {
+    return {
+      pass: false,
+      message: "Invalid email address.",
+    };
+  }
+
+  return {
+    pass: true,
+    message: undefined,
+  };
+}
+
+function validatePassword(value) {
+  if (value.length < 8 || value.length > 16) {
+    return {
+      pass: false,
+      message: "Password must be between 8 and 16 characters long",
+    };
+  }
+
+  return {
+    pass: true,
+    message: undefined,
+  };
+}
+
+export { validateDate, validatePlace, validateEmail, validatePassword };

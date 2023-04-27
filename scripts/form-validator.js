@@ -2,7 +2,6 @@ import { getFormData, addLocalStorageEntry } from "./utils.js";
 
 class FormValidator {
   constructor(formSelector) {
-    console.log(document.querySelector(formSelector));
     this.form = document.querySelector(formSelector);
     this.invalidFields = [];
 
