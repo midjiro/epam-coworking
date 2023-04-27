@@ -157,6 +157,10 @@ form {
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
 }
 
+.navbar__brand {
+  color: inherit;
+}
+
 .navbar__menu {
   display: none;
 }
