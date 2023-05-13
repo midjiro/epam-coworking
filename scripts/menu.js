@@ -1,19 +1,28 @@
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-auth.js";
+import AUTH from "./config.js";
+import Link from "./link.js";
+
 class Menu {
-  constructor(toggleSelector) {
-    this.toggle = document.getElementsByClassName(toggleSelector)[0];
+  constructor(
+    toggleSelector,
+    navMenuSelector,
+    defaultLinks,
+    authenticatedUserLinks
+  ) {
+    this.toggle = document.querySelector(toggleSelector);
+    this.menu = document.querySelector(navMenuSelector);
+
+    this.defaultLinks = defaultLinks;
+    this.authenticatedUserLinks = authenticatedUserLinks;
 
     this.#handleLoad();
     this.toggle.addEventListener("click", this.#switchState.bind(this));
     window.addEventListener("resize", this.#handleResize.bind(this));
+    onAuthStateChanged(AUTH, this.renderLinks.bind(this));
   }
 
   get isExpanded() {
-    let expanded = this.toggle.getAttribute("aria-expanded");
-    if (expanded === "true") {
-      return true;
-    }
-
-    return false;
+    return this.toggle.getAttribute("aria-expanded") === "true";
   }
 
   #switchState() {
@@ -21,17 +30,25 @@ class Menu {
   }
 
   #handleResize() {
-    let width = window.innerWidth;
-    if (!this.isExpanded && width >= 768) {
-      this.toggle.setAttribute("aria-expanded", "true");
-    }
+    if (window.innerWidth < 768 || this.isExpanded) return;
+    this.toggle.setAttribute("aria-expanded", "true");
   }
 
   #handleLoad() {
-    let width = window.innerWidth;
-    if (width >= 768) {
-      this.toggle.setAttribute("aria-expanded", "true");
+    if (window.innerWidth < 768) return;
+    this.toggle.setAttribute("aria-expanded", "true");
+  }
+
+  renderLinks(user) {
+    let links = [];
+
+    if (!user) {
+      links = Link.createList(this.defaultLinks);
+    } else {
+      links = Link.createList(this.authenticatedUserLinks);
     }
+
+    this.menu.replaceChildren(...links);
   }
 }
 
