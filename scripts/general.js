@@ -8,7 +8,8 @@ const generalLinks = [
 ];
 
 const defaultLinks = generalLinks.concat(
-  new Link("Authenticate", "templates/authenticate.html")
+  new Link("Authenticate", "templates/authenticate.html"),
+  new Link("Book a place", "/#booking-form", "button--outline")
 );
 
 const authenticatedUserLinks = generalLinks.concat(

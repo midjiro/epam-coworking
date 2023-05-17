@@ -9,7 +9,7 @@ class Link {
     const link = document.createElement("a");
     link.textContent = this.caption;
     link.href = this.href ? this.href : "#";
-    this.className ? (link.className = this.className) : null;
+    this.className ? (link.className = this.className) : knull;
 
     return link;
   }

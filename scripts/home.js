@@ -12,7 +12,10 @@ function handleSubmit(form, storage) {
   storage.book(place);
 }
 
-handleSubmit = authRequired(handleSubmit);
+handleSubmit = authRequired(
+  handleSubmit,
+  "You must be logged in to book a place."
+);
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
