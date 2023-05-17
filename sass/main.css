@@ -149,6 +149,12 @@ form {
   color: #ef233c;
 }
 
+/* Colors */
+/* Font Sizing */
+/* 16.00px → 18.00px */
+/* 24.00px → 32.00px  */
+/* 32.00px → 36.00px  */
+/* 36.00px → 48.00px  */
 @keyframes slidedown {
   from {
     transform: translateY(-200%);
@@ -157,8 +163,8 @@ form {
     transform: translateY(0);
   }
 }
-.alert {
-  position: absolute;
+.popup {
+  position: fixed;
   top: 2%;
   left: 0;
   right: 0;
@@ -171,10 +177,10 @@ form {
   background: #ffffff;
   transition: all 0.2s;
 }
-.alert, .alert--success, .alert--error {
+.popup, .popup--success, .popup--error {
   animation: 1s forwards slidedown;
 }
-.alert__message {
+.popup__message {
   color: #4361ee;
 }
 
@@ -293,17 +299,17 @@ form {
   border-color: #ef233c;
 }
 
-.alert--success {
+.popup--success {
   border: 2px solid lightgreen;
 }
-.alert--success > .alert__message {
+.popup--success > .popup__message {
   color: lightgreen;
 }
 
-.alert--error {
+.popup--error {
   border: 2px solid #ef233c;
 }
-.alert--error > .alert__message {
+.popup--error > .popup__message {
   color: #ef233c;
 }
 

@@ -7,12 +7,15 @@ import {
   query,
   deleteDoc,
 } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-firestore.js";
+import Popup from "../components/popup.js";
+import { notify } from "./utils.js";
 import { DB } from "../config.js";
 
 class Storage {
   constructor(bookedPlacesCollectionName, coworkingTypesCollectionName) {
     this.bookedPlacesCollectionName = bookedPlacesCollectionName;
     this.coworkingTypesCollectionName = coworkingTypesCollectionName;
+    this.popup = new Popup();
   }
 
   async isBookedPlace(place) {
@@ -32,22 +35,38 @@ class Storage {
     const storageCollection = collection(DB, this.bookedPlacesCollectionName);
     const isAlreadyBooked = await this.isBookedPlace(place);
 
-    if (isAlreadyBooked)
-      throw Error(`Place № ${place.number} is already booked.`);
+    if (isAlreadyBooked) {
+      notify(`Place № ${place.number} is already booked.`, "error", this.popup);
+      return;
+    }
 
     place = place.toFirebaseObject();
     await setDoc(doc(storageCollection), place);
   }
 
   async unbook(id, owner) {
-    if (!id || !owner) throw Error("Id and owner both must be set.");
+    if (!id || !owner) {
+      notify(
+        "You can't unbook place that doesn't belongs to you.",
+        "error",
+        this.popup
+      );
+      return;
+    }
 
     const storageCollection = collection(DB, this.bookedPlacesCollectionName);
     const docRef = doc(storageCollection, id);
 
     const response = await getDoc(docRef);
 
-    if (!response.exists()) throw Error("No place booked by given user found.");
+    if (!response.exists()) {
+      notify(
+        "Place that you are trying to unbook doesn't exists.",
+        "error",
+        this.popup
+      );
+      return;
+    }
 
     await deleteDoc(docRef);
   }

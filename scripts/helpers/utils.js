@@ -28,4 +28,8 @@ function authRequired(func, errorMessage) {
   };
 }
 
-export { getFormData, addLocalStorageEntry, authRequired };
+function notify(message, modifier, popup = new Popup()) {
+  popup.message = message;
+  modifier ? popup.show(modifier) : popup.show();
+}
+export { getFormData, addLocalStorageEntry, authRequired, notify };

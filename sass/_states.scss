@@ -2,18 +2,18 @@
   border-color: $red;
 }
 
-.alert--success {
+.popup--success {
   border: 2px solid lightgreen;
 
-  > .alert__message {
+  > .popup__message {
     color: lightgreen;
   }
 }
 
-.alert--error {
+.popup--error {
   border: 2px solid $red;
 
-  > .alert__message {
+  > .popup__message {
     color: $red;
   }
 }

@@ -15,7 +15,7 @@ class Link {
   }
 
   static createList(links) {
-    if (!links) throw Error("No links provided");
+    if (!links) throw Error("No links provided.");
 
     let list = [];
     list = links.map((link) => link.create());

@@ -1,5 +1,5 @@
 import { AUTH } from "../../config.js";
-import Alert from "../alert.js";
+import Popup from "../popup.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-auth.js";
 
 class AuthForm {
@@ -16,46 +16,46 @@ class AuthForm {
   }
 
   handleError(error) {
-    let alert = new Alert();
+    let popup = new Popup();
 
     switch (error.code) {
       // Registration errors
       case "auth/email-already-in-use":
-        alert.message = "Email is already in use.";
+        popup.message = "Email is already in use.";
         break;
 
       case "auth/missing-email":
-        alert.message = "Please fill the email field.";
+        popup.message = "Please fill the email field.";
         break;
 
       case "auth/missing-password":
-        alert.message = "Please fill the password field.";
+        popup.message = "Please fill the password field.";
         break;
 
       case "auth/weak-password":
-        alert.message = "Password length must be at least 6 characters.";
+        popup.message = "Password length must be at least 6 characters.";
         break;
 
       // Login errors
       case "auth/user-not-found":
-        alert.message = "No account found with such email and password.";
+        popup.message = "No account found with such email and password.";
         break;
 
       case "auth/invalid-email":
-        alert.message = "Invalid email address. Try again.";
+        popup.message = "Invalid email address. Try again.";
         break;
 
       case "auth/wrong-password":
-        alert.message = "Invalid password. Try again.";
+        popup.message = "Invalid password. Try again.";
         break;
 
       default:
-        alert.message = "Something went wrong. Please contact us.";
+        popup.message = "Something went wrong. Please contact us.";
         console.error(error.code, error.message);
         break;
     }
 
-    alert.show("error");
+    popup.show("error");
   }
 
   get email() {
@@ -69,10 +69,8 @@ class AuthForm {
   }
 
   async #checkAuthState(user) {
-    let alert = new Alert(
-      "Welcome on board! You have authenticated successfully ."
-    );
-    user ? alert.show() : null;
+    notify("Welcome on board! You have authenticated successfully.");
+    user ? popup.show() : null;
   }
 }
 

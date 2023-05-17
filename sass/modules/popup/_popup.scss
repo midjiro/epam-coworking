@@ -1,3 +1,5 @@
+@use "../../vars";
+
 @keyframes slidedown {
   from {
     transform: translateY(-200%);
@@ -7,8 +9,8 @@
   }
 }
 
-.alert {
-  position: absolute;
+.popup {
+  position: fixed;
   top: 2%;
   left: 0;
   right: 0;
@@ -16,9 +18,9 @@
   max-inline-size: 300px;
   margin-inline: auto;
   padding-inline: 1rem;
-  border: 2px solid $blue;
+  border: 2px solid vars.$blue;
   font-weight: 900;
-  background: $white;
+  background: vars.$white;
   transition: all 0.2s;
 
   &,
@@ -28,6 +30,6 @@
   }
 
   &__message {
-    color: $blue;
+    color: vars.$blue;
   }
 }
