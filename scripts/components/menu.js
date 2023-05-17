@@ -1,5 +1,5 @@
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-auth.js";
-import AUTH from "./config.js";
+import { AUTH } from "../config.js";
 import Link from "./link.js";
 
 class Menu {

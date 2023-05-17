@@ -1,8 +1,18 @@
-import FormValidator from "./form-validator.js";
-import { validateDate, validatePlace } from "./validators.js";
+import Place from "./components/place.js";
+import Storage from "./helpers/storage.js";
+import { authRequired } from "./helpers/utils.js";
 
-let [place, date] = document.querySelectorAll("input");
-const formValidator = new FormValidator("form");
+const form = document.querySelector(".form");
+const storage = new Storage("places", "coworkingTypes");
 
-formValidator.register(place, validatePlace);
-formValidator.register(date, validateDate);
+function handleSubmit(form, storage) {
+  const place = Place.fromForm(form);
+  storage.book(place);
+}
+
+handleSubmit = authRequired(handleSubmit);
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  handleSubmit(form, storage);
+});

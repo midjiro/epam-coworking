@@ -1,5 +1,5 @@
-import Menu from "./menu.js";
-import Link from "./link.js";
+import Menu from "./components/menu.js";
+import Link from "./components/link.js";
 
 const generalLinks = [
   new Link("About Us", "/#about"),

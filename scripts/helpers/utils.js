@@ -1,3 +1,5 @@
+import { AUTH } from "../config.js";
+
 function getFormData(formFields) {
   let coworking = {};
   for (let formField of formFields) {
@@ -17,4 +19,13 @@ function addLocalStorageEntry(table, entry) {
   localStorage.setItem(table, jsonEntry);
 }
 
-export { getFormData, addLocalStorageEntry };
+// wraps function into another one which checks wether user has logged in or not
+function authRequired(func, errorMessage) {
+  return (...args) => {
+    if (!AUTH.currentUser) throw Error(errorMessage);
+
+    return func(...args);
+  };
+}
+
+export { getFormData, addLocalStorageEntry, authRequired };

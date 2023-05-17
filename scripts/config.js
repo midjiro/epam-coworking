@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-app.js";
 import { getAuth } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-auth.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-firestore.js";
 
 // Your web app's Firebase configuration
 const CONFIG = {
@@ -16,4 +17,6 @@ const APP = initializeApp(CONFIG);
 // Reference to Firebase authentication service
 const AUTH = getAuth(APP);
 
-export default AUTH;
+const DB = getFirestore(APP);
+
+export { APP, AUTH, DB };

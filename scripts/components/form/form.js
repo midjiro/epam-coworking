@@ -1,5 +1,5 @@
-import AUTH from "./config.js";
-import Alert from "./alert.js";
+import { AUTH } from "../../config.js";
+import Alert from "../alert.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-auth.js";
 
 class AuthForm {

@@ -1,5 +1,5 @@
-import RegisterForm from "./register-form.js";
-import LoginForm from "./login-form.js";
+import RegisterForm from "./components/form/register-form.js";
+import LoginForm from "./components/form/login-form.js";
 
 const registerForm = new RegisterForm("form", "input", "#btn-register");
 const loginForm = new LoginForm("form", "input", "#btn-login");
