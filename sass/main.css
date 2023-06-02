@@ -89,9 +89,9 @@ main {
 }
 
 form {
-  display: grid;
-  place-items: center;
-  gap: 0.5rem;
+  inline-size: -moz-max-content;
+  inline-size: max-content;
+  margin: 0 auto;
 }
 
 .button--outline {
@@ -278,16 +278,29 @@ form {
   gap: 2rem;
 }
 
+.booking {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 1.5rem;
+}
+
+.booking__form {
+  inline-size: 100%;
+  display: grid;
+  place-items: center;
+}
+
 .booking__text {
-  max-inline-size: 45ch;
   text-align: center;
+  inline-size: min(100%, 45ch);
   margin-inline: auto;
 }
 
 .map {
-  display: block;
   inline-size: 100%;
-  height: 400px;
+  block-size: 100%;
+  border: none;
 }
 
 .field__input--invalid {
