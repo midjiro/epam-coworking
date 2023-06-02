@@ -200,8 +200,7 @@ form {
   display: none;
 }
 
-.navbar,
-.contacts {
+.navbar {
   padding: 2% 4%;
 }
 
@@ -291,10 +290,6 @@ form {
   height: 400px;
 }
 
-.contacts__list {
-  justify-content: center;
-}
-
 .field__input--invalid {
   border-color: #ef233c;
 }
@@ -317,8 +312,7 @@ form {
   section {
     padding-block: 2.87%;
   }
-  .navbar,
-  .contacts {
+  .navbar {
     padding: 1.11% 4.44%;
   }
   .navbar__toggle {
