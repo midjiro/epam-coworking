@@ -36,4 +36,19 @@ function notify(message, modifier, popup = new Popup()) {
   modifier ? popup.show(modifier) : popup.show();
 }
 
-export { getFormData, addLocalStorageEntry, authRequired, notify };
+function createMail(extractedData) {
+  if (!extractedData) throw Error("Unable to create a mail: no data provided.");
+  const { firstName, email, message } = extractedData;
+  if (message.length == 0) return null;
+  const mail = {
+    to: [contactMailsRecipient],
+    message: {
+      subject: "Contact Form",
+      html: `<h1>From: ${firstName}</h1><h2>Contact Address: ${email}</h2><p>${message}</p>`,
+    },
+  };
+
+  return mail;
+}
+
+export { getFormData, addLocalStorageEntry, authRequired, notify, createMail };

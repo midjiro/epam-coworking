@@ -115,15 +115,34 @@
   place-items: center;
 }
 
-.booking__text {
+.booking__text,
+.contact__text {
   text-align: center;
   inline-size: min(100%, 45ch);
   margin-inline: auto;
 }
 
 // Map
+
 .map {
   inline-size: 100%;
   block-size: 100%;
   border: none;
+}
+
+// Contact
+
+.contact__form {
+  display: flex;
+  flex-wrap: wrap;
+  inline-size: max(290px, 30%);
+  gap: 1rem;
+}
+
+.contact__form > * {
+  flex: 1 1 150px;
+}
+
+.contact__form > .field:has(textarea) {
+  flex: 2 2 290px;
 }
