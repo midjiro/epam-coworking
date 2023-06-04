@@ -9,6 +9,7 @@
 }
 
 .navbar__brand {
+  font-size: $md;
   color: inherit;
 }
 
@@ -16,8 +17,7 @@
   display: none;
 }
 
-.navbar,
-.contacts {
+.navbar {
   padding: 2% 4%;
 }
 
@@ -85,12 +85,6 @@
   object-fit: cover;
 }
 
-.about h2 {
-  font-size: $xl;
-  text-align: left;
-  margin-inline: 0;
-}
-
 // Pricing
 
 .pricing {
@@ -103,21 +97,23 @@
 
 // Booking
 
-.booking__text {
-  max-inline-size: 45ch;
-  text-align: center;
-  margin-inline: auto;
+.booking {
+  display: grid;
+  grid-auto-rows: max-content;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
 }
 
 // Map
+
 .map {
-  display: block;
   inline-size: 100%;
-  height: 400px;
+  block-size: 100%;
+  border: none;
 }
 
-// Contacts
-
-.contacts__list {
-  justify-content: center;
+.booking__form,
+.contact__form {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  column-gap: 1rem;
 }

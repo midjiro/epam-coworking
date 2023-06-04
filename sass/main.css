@@ -40,13 +40,22 @@ button {
   transition: all 0.2s ease-in-out;
 }
 
-h2 {
-  font-size: clamp(2rem, 1.91rem + 0.38vw, 2.25rem);
-  text-align: center;
-  margin-inline: auto;
+input[type=date]:required:invalid::-webkit-datetime-edit {
+  color: transparent;
 }
 
-h1,
+input[type=date]:focus::-webkit-datetime-edit {
+  color: #888888 !important;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 1.99rem + 1.13vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 1.91rem + 0.38vw, 2.25rem);
+}
+
 h3 {
   font-size: clamp(1.5rem, 1.32rem + 0.75vw, 2rem);
 }
@@ -88,12 +97,6 @@ main {
   padding: 8.53% 10.6%;
 }
 
-form {
-  display: grid;
-  place-items: center;
-  gap: 0.5rem;
-}
-
 .button--outline {
   padding: 0.875rem 1.25rem;
   border: 2px solid #4361ee;
@@ -129,24 +132,33 @@ form {
   font-weight: 500;
 }
 
+.form {
+  inline-size: min(100%, 316px);
+  display: grid;
+  row-gap: 0.5rem;
+  margin: 0 auto;
+}
+
+.field,
+.field__input {
+  inline-size: 100%;
+}
+
 .field {
-  inline-size: 290px;
+  font-weight: 500;
 }
 
 .field__input {
   display: block;
-  inline-size: 100%;
-  padding: 1rem;
+  padding: 0.75rem;
   margin-block: 0.25rem;
+  color: #888888;
+  border-radius: 0;
   border: 2px solid #888888;
   outline: none;
 }
 .field__input:focus {
   border-color: #4361ee;
-}
-
-.field__message {
-  color: #ef233c;
 }
 
 /* Colors */
@@ -193,6 +205,7 @@ form {
 }
 
 .navbar__brand {
+  font-size: clamp(1.5rem, 1.32rem + 0.75vw, 2rem);
   color: inherit;
 }
 
@@ -200,8 +213,7 @@ form {
   display: none;
 }
 
-.navbar,
-.contacts {
+.navbar {
   padding: 2% 4%;
 }
 
@@ -265,12 +277,6 @@ form {
      object-fit: cover;
 }
 
-.about h2 {
-  font-size: clamp(2.25rem, 1.99rem + 1.13vw, 3rem);
-  text-align: left;
-  margin-inline: 0;
-}
-
 .pricing {
   display: flex;
   flex-wrap: wrap;
@@ -279,20 +285,24 @@ form {
   gap: 2rem;
 }
 
-.booking__text {
-  max-inline-size: 45ch;
-  text-align: center;
-  margin-inline: auto;
+.booking {
+  display: grid;
+  grid-auto-rows: max-content;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
 }
 
 .map {
-  display: block;
   inline-size: 100%;
-  height: 400px;
+  block-size: 100%;
+  border: none;
 }
 
-.contacts__list {
-  justify-content: center;
+.booking__form,
+.contact__form {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
 }
 
 .field__input--invalid {
@@ -317,8 +327,7 @@ form {
   section {
     padding-block: 2.87%;
   }
-  .navbar,
-  .contacts {
+  .navbar {
     padding: 1.11% 4.44%;
   }
   .navbar__toggle {
@@ -347,4 +356,17 @@ form {
   .about__story {
     max-inline-size: 45ch;
   }
+}
+.text--centered {
+  display: block;
+  text-align: center;
+}
+
+.text--centered,
+.form--centered {
+  margin-inline: auto;
+}
+
+.full-width {
+  grid-column: span 2;
 }/*# sourceMappingURL=main.css.map */

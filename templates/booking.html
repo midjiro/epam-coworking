@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://yarnpkg.com/en/package/normalize.css">
+    <link rel="stylesheet" href="../sass/main.css" />
+    <title>MyOffice</title>
+</head>
+
+<body>
+    <header class="navbar">
+        <a href="/" class="navbar__brand">MyOffice</a>
+        <button class="navbar__toggle" aria-expanded="false" aria-controls="navbar-menu">
+            <i class="fa-solid fa-bars navbar__icon fa-xl"></i>
+        </button>
+        <nav class="navbar__menu" id="navbar-menu" role="menu">
+        </nav>
+    </header>
+    <main class="container">
+        <section id="booking-form" class="booking" aria-label="booking form">
+            <div>
+                <h1 class="text--centered">Fill the blank</h1>
+                <p class="text--centered">
+                    Fill the blank and enjoy time spent in our office! Application will be
+                    processed in few minutes.
+                </p>
+                <form method="POST" class="form form--centered booking__form ">
+                    <label class="field">
+                        Place Number
+                        <input type="number" name="number" min="1" class="field__input" required />
+                    </label>
+                    <label class="field">
+                        Date
+                        <input type="date" name="date" class="field__input" required />
+                    </label>
+                    <label class="field full-width">
+                        Workspace
+                        <input list="coworking-type" type="text" name="type" class="field__input" required />
+                    </label>
+                    <datalist id="coworking-type">
+                        <option value="open-space">Open Space</option>
+                        <option value="work-space">Work Space</option>
+                        <option value="meeting-room">Meeting Room</option>
+                    </datalist>
+                    <button type="submit" class="button--outline full-width">Book a place</button>
+                </form>
+            </div>
+            <iframe class="map" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBGmRTQSQIZOQPpUBkzb4tysI3CaG3NCdU
+    &q=Pasichna+St%2C+62%D0%91%2C+L%27viv%2C+L%27vivs%27ka+oblast%2C+79000" allowfullscreen>
+            </iframe>
+        </section>
+    </main>
+    <footer>
+        <script src="../scripts/booking.js" type="module"></script>
+        <script src="../scripts/general.js" type="module"></script>
+    </footer>
+</body>
+
+</html>

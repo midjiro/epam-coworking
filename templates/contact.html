@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://yarnpkg.com/en/package/normalize.css">
+    <link rel="stylesheet" href="../sass/main.css" />
+    <title>MyOffice</title>
+</head>
+
+<body>
+    <header class="navbar">
+        <a href="/" class="navbar__brand">MyOffice</a>
+        <button class="navbar__toggle" aria-expanded="false" aria-controls="navbar-menu">
+            <i class="fa-solid fa-bars navbar__icon fa-xl"></i>
+        </button>
+        <nav class="navbar__menu" id="navbar-menu" role="menu">
+        </nav>
+    </header>
+    <main class="container">
+        <section class="contact">
+            <h1 class="text--centered">Get in Touch</h1>
+            <p class="text--centered">Reach Out to Us for Assistance, Inquiries, and Feedback.</p>
+            <form method="POST" class="form form--centered contact__form">
+                <label class="field">
+                    Full Name
+                    <input type="text" name="firstName" required class="field__input">
+                </label>
+                <label class="field">
+                    Email Address
+                    <input type="email" name="email" required class="field__input">
+                </label>
+                <label class="field full-width">
+                    Message
+                    <textarea name="message" cols="30" rows="3" required class="field__input"></textarea>
+                </label>
+                <button type="submit" class="button--outline full-width" id="btn-contact">Send Mail</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <script src="../scripts/contact.js" type="module"></script>
+        <script src="../scripts/general.js" type="module"></script>
+    </footer>
+</body>
+
+</html>

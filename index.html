@@ -15,40 +15,28 @@
 
 <body>
 	<header class="navbar">
-		<h1 class="navbar__brand">MyOffice</h1>
+		<a href="/" class="navbar__brand">MyOffice</a>
 		<button class="navbar__toggle" aria-expanded="false" aria-controls="navbar-menu">
 			<i class="fa-solid fa-bars navbar__icon fa-xl"></i>
 		</button>
 		<nav class="navbar__menu" id="navbar-menu" role="menu">
-			<a href="#about" class="navbar__link" role="menuitem"> About Us </a>
-			<a href="#pricing" class="navbar__link" role="menuitem">
-				Coworking Types
-			</a>
-			<a href="#contacts" class="navbar__link" role="menuitem"> Contacts </a>
-			<a href="https://midjiro.github.io/epam-coworking/templates/authenticate.html" class="navbar__link"
-				role="menuitem">
-				Authenticate
-			</a>
-			<a href="#booking-form" class="button--outline" role="menuitem">
-				Book a place
-			</a>
 		</nav>
 	</header>
 	<main class="container">
 		<section id="about" class="about" aria-label="about">
 			<div class="about__story">
-				<h2 class="about__title">MyOffice Work Space</h2>
+				<h1>MyOffice Work Space</h1>
 				<p>
 					We take care of clients, creating the most comfortable working
 					conditions in our office. Choose and try the type of coworking that
 					is most suitable for your activity.
 				</p>
-				<a href="#booking-form" class="button--outline">Book a place</a>
+				<a href="templates/booking.html" class="button--outline">Book a place</a>
 			</div>
 			<img src="images/header.png" alt="" class="about__photo" />
 		</section>
 		<section id="pricing" aria-label="pricing">
-			<h2>Coworking Types</h2>
+			<h2 class="text--centered">Coworking Types</h2>
 			<div class="pricing">
 				<article class="card">
 					<h3 class="card__title">Open Space</h3>
@@ -84,43 +72,8 @@ Convenient places for meetings" class="card__thumbnail" />
 				</article>
 			</div>
 		</section>
-		<section id="booking-form" class="booking" aria-label="booking form">
-			<h2>Fill the blank</h2>
-			<p class="booking__text">
-				Fill the blank and enjoy time spent in our office! Application will be
-				processed in few minutes.
-			</p>
-			<form action="" method="POST" class="form">
-				<div class="field">
-					<input type="number" name="number" placeholder="Place Number" min="1" class="field__input"
-						required />
-					<p class="field__message"></p>
-				</div>
-				<div class="field">
-					<input type="date" name="date" placeholder="Date" class="field__input" required />
-					<p class="field__message"></p>
-				</div>
-				<div class="field">
-					<input list="coworking-type" type="text" name="type" placeholder="Coworking Type"
-						class="field__input" required />
-					<p class="field__message"></p>
-				</div>
-				<datalist id="coworking-type">
-					<option value="open-space">Open Space</option>
-					<option value="work-space">Work Space</option>
-					<option value="meeting-room">Meeting Room</option>
-				</datalist>
-				<button type="submit" class="button--outline">Book a place</button>
-			</form>
-		</section>
-		<section>
-			<iframe class="map" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBGmRTQSQIZOQPpUBkzb4tysI3CaG3NCdU
-    &q=Pasichna+St%2C+62%D0%91%2C+L%27viv%2C+L%27vivs%27ka+oblast%2C+79000" allowfullscreen>
-			</iframe>
-		</section>
 	</main>
-
-	<footer id="contacts" class="contacts" aria-label="contacts">
+	<<<<<<< HEAD <footer id="contacts" class="contacts" aria-label="contacts">
 		<h2>Contacts</h2>
 		<ul class="contacts__list">
 			<li class="contacts__item">
@@ -155,8 +108,11 @@ Convenient places for meetings" class="card__thumbnail" />
 			</li>
 		</ul>
 		<script src="scripts/home.js" type="module"></script>
-		<script src="scripts/general.js" type="module"></script>
-	</footer>
+		=======
+		<footer>
+			>>>>>>> dev
+			<script src="scripts/general.js" type="module"></script>
+		</footer>
 </body>
 
 </html>

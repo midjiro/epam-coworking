@@ -16,7 +16,6 @@ const CONFIG = {
 const APP = initializeApp(CONFIG);
 // Reference to Firebase authentication service
 const AUTH = getAuth(APP);
-
 const DB = getFirestore(APP);
-
-export { APP, AUTH, DB };
+const contactMailsRecipient = "miha.gulak@gmail.com";
+export { APP, AUTH, DB, contactMailsRecipient };

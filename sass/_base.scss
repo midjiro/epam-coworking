@@ -33,13 +33,22 @@ button {
   transition: all 0.2s ease-in-out;
 }
 
-h2 {
-  font-size: $lg;
-  text-align: center;
-  margin-inline: auto;
+input[type="date"]:required:invalid::-webkit-datetime-edit {
+  color: transparent;
 }
 
-h1,
+input[type="date"]:focus::-webkit-datetime-edit {
+  color: $gray !important;
+}
+
+h1 {
+  font-size: $xl;
+}
+
+h2 {
+  font-size: $lg;
+}
+
 h3 {
   font-size: $md;
 }
@@ -78,10 +87,4 @@ section:not(section:first-of-type) {
 
 main {
   padding: 8.53% 10.6%;
-}
-
-form {
-  display: grid;
-  place-items: center;
-  gap: 0.5rem;
 }

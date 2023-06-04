@@ -1,13 +1,19 @@
 import { AUTH } from "../../config.js";
 import Popup from "../popup.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-auth.js";
+import { notify } from "../../helpers/utils.js";
 
-class AuthForm {
+class Form {
   constructor(formSelector, fieldSelector, triggerSelector) {
     this.form = document.querySelector(formSelector);
     this.fields = this.form.querySelectorAll(fieldSelector);
     this.trigger = document.querySelector(triggerSelector);
+  }
+}
 
+class AuthForm extends Form {
+  constructor(formSelector, fieldSelector, triggerSelector) {
+    super(formSelector, fieldSelector, triggerSelector);
     this.form.addEventListener("submit", (e) => {
       e.preventDefault();
     });
@@ -69,9 +75,10 @@ class AuthForm {
   }
 
   async #checkAuthState(user) {
-    notify("Welcome on board! You have authenticated successfully.");
-    user ? popup.show() : null;
+    user
+      ? notify("Welcome on board! You have authenticated successfully.")
+      : null;
   }
 }
 
-export default AuthForm;
+export { Form, AuthForm };
