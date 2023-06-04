@@ -111,9 +111,3 @@
   block-size: 100%;
   border: none;
 }
-
-.booking__form,
-.contact__form {
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  column-gap: 1rem;
-}

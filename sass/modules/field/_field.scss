@@ -1,16 +1,12 @@
-.field,
-.field__input {
-  inline-size: 100%;
-}
-
 .field {
   font-weight: 500;
 }
 
 .field__input {
   display: block;
+  inline-size: 100%;
   padding: 0.75rem;
-  margin-block: 0.25rem;
+  margin: 0.25rem 0;
   color: $gray;
   border-radius: 0;
   border: 2px solid $gray;
