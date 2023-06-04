@@ -15,7 +15,7 @@
 
 <body>
     <header class="navbar">
-        <h1><a href="/" class="navbar__brand">MyOffice</a></h1>
+        <a href="/" class="navbar__brand">MyOffice</a>
         <button class="navbar__toggle" aria-expanded="false" aria-controls="navbar-menu">
             <i class="fa-solid fa-bars navbar__icon fa-xl"></i>
         </button>
@@ -24,33 +24,33 @@
     </header>
     <main class="container">
         <section id="booking-form" class="booking" aria-label="booking form">
-            <form action="" method="POST" class="booking__form form">
-                <h2 class="booking__title">Fill the blank</h2>
-                <p class="booking__text">
+            <div>
+                <h1 class="text--centered">Fill the blank</h1>
+                <p class="text--centered">
                     Fill the blank and enjoy time spent in our office! Application will be
                     processed in few minutes.
                 </p>
-                <div class="field">
-                    <input type="number" name="number" placeholder="Place Number" min="1" class="field__input"
-                        required />
-                    <p class="field__message"></p>
-                </div>
-                <div class="field">
-                    <input type="date" name="date" class="field__input" required />
-                    <p class="field__message"></p>
-                </div>
-                <div class="field">
-                    <input list="coworking-type" type="text" name="type" placeholder="Coworking Type"
-                        class="field__input" required />
-                    <p class="field__message"></p>
-                </div>
-                <datalist id="coworking-type">
-                    <option value="open-space">Open Space</option>
-                    <option value="work-space">Work Space</option>
-                    <option value="meeting-room">Meeting Room</option>
-                </datalist>
-                <button type="submit" class="button--outline">Book a place</button>
-            </form>
+                <form method="POST" class="form form--centered booking__form ">
+                    <label class="field">
+                        Place Number
+                        <input type="number" name="number" min="1" class="field__input" required />
+                    </label>
+                    <label class="field">
+                        Date
+                        <input type="date" name="date" class="field__input" required />
+                    </label>
+                    <label class="field full-width">
+                        Workspace
+                        <input list="coworking-type" type="text" name="type" class="field__input" required />
+                    </label>
+                    <datalist id="coworking-type">
+                        <option value="open-space">Open Space</option>
+                        <option value="work-space">Work Space</option>
+                        <option value="meeting-room">Meeting Room</option>
+                    </datalist>
+                    <button type="submit" class="button--outline full-width">Book a place</button>
+                </form>
+            </div>
             <iframe class="map" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBGmRTQSQIZOQPpUBkzb4tysI3CaG3NCdU
     &q=Pasichna+St%2C+62%D0%91%2C+L%27viv%2C+L%27vivs%27ka+oblast%2C+79000" allowfullscreen>
             </iframe>

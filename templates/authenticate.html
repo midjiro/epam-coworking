@@ -14,7 +14,7 @@
 
 <body>
   <header class="navbar">
-    <h1><a href="/" class="navbar__brand">MyOffice</a></h1>
+    <a href="/" class="navbar__brand">MyOffice</a>
     <button class="navbar__toggle" aria-expanded="false" aria-controls="navbar-menu">
       <i class="fa-solid fa-bars navbar__icon fa-xl"></i>
     </button>
@@ -22,22 +22,18 @@
     </nav>
   </header>
   <main>
-    <form action="" method="POST" class="form">
-      <h2>Authenticate</h2>
-      <div class="field">
+    <h1 class="text--centered">Authenticate</h1>
+    <form method="POST" class="form form--centered auth__form">
+      <label class="field">
         Email
         <input type="email" name="email" placeholder="example@gmail.com" class="field__input" />
-        <p class="field__message"></p>
-      </div>
-      <div class="field">
+      </label>
+      <label class="field">
         Password
         <input type="password" name="password" maxlength="16" class="field__input" />
-        <p class="field__message"></p>
-      </div>
-      <div>
-        <button type="submit" class="button--outline" id="btn-register">Sign Up</button>
-        <button type="submit" class="button--outline" id="btn-login">Sign In</button>
-      </div>
+      </label>
+      <button type="submit" class="button--outline" id="btn-register">Sign Up</button>
+      <button type="submit" class="button--outline" id="btn-login">Sign In</button>
     </form>
   </main>
   <footer>

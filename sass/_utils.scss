@@ -1,0 +1,13 @@
+.text--centered {
+  display: block;
+  text-align: center;
+}
+
+.text--centered,
+.form--centered {
+  margin-inline: auto;
+}
+
+.full-width {
+  grid-column: span 2;
+}

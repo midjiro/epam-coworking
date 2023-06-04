@@ -15,7 +15,7 @@
 
 <body>
     <header class="navbar">
-        <h1><a href="/" class="navbar__brand">MyOffice</a></h1>
+        <a href="/" class="navbar__brand">MyOffice</a>
         <button class="navbar__toggle" aria-expanded="false" aria-controls="navbar-menu">
             <i class="fa-solid fa-bars navbar__icon fa-xl"></i>
         </button>
@@ -24,9 +24,9 @@
     </header>
     <main class="container">
         <section class="contact">
-            <h2 class="contact__title">Get in Touch</h2>
-            <p class="contact__text">Reach Out to Us for Assistance, Inquiries, and Feedback.</p>
-            <form method="POST" class="contact__form">
+            <h1 class="text--centered">Get in Touch</h1>
+            <p class="text--centered">Reach Out to Us for Assistance, Inquiries, and Feedback.</p>
+            <form method="POST" class="form form--centered contact__form">
                 <label class="field">
                     Full Name
                     <input type="text" name="firstName" required class="field__input">
@@ -35,11 +35,11 @@
                     Email Address
                     <input type="email" name="email" required class="field__input">
                 </label>
-                <label class="field">
+                <label class="field full-width">
                     Message
                     <textarea name="message" cols="30" rows="3" required class="field__input"></textarea>
                 </label>
-                <button type="submit" class="button--outline" id="btn-contact">Send Mail</button>
+                <button type="submit" class="button--outline full-width" id="btn-contact">Send Mail</button>
             </form>
         </section>
     </main>
